@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99EA0DCFD747C35F603AE06F /* Pods_TakeANumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5308BDD1FC725FFDA8C332A /* Pods_TakeANumber.framework */; };
 		ED15C11D220E8794006DD85C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15C11C220E8794006DD85C /* AppDelegate.swift */; };
-		ED15C11F220E8794006DD85C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15C11E220E8794006DD85C /* ViewController.swift */; };
 		ED15C122220E8794006DD85C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED15C120220E8794006DD85C /* Main.storyboard */; };
 		ED15C124220E8796006DD85C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED15C123220E8796006DD85C /* Assets.xcassets */; };
 		ED15C127220E8796006DD85C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED15C125220E8796006DD85C /* LaunchScreen.storyboard */; };
+		ED15C12F220E8858006DD85C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15C12E220E8858006DD85C /* TableViewController.swift */; };
+		ED15C131220E8A7F006DD85C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED15C130220E8A7F006DD85C /* GoogleService-Info.plist */; };
+		ED290CCA22109872002768FB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED290CC922109872002768FB /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6AEDC37C499E4EFE4EAE25E9 /* Pods-TakeANumber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeANumber.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TakeANumber/Pods-TakeANumber.debug.xcconfig"; sourceTree = "<group>"; };
+		98F6C9378BA8F73E35EDF8EC /* Pods-TakeANumber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeANumber.release.xcconfig"; path = "Pods/Target Support Files/Pods-TakeANumber/Pods-TakeANumber.release.xcconfig"; sourceTree = "<group>"; };
+		D5308BDD1FC725FFDA8C332A /* Pods_TakeANumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TakeANumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED15C119220E8794006DD85C /* TakeANumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeANumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED15C11C220E8794006DD85C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED15C11E220E8794006DD85C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ED15C121220E8794006DD85C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED15C123220E8796006DD85C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED15C126220E8796006DD85C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED15C128220E8796006DD85C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED15C12E220E8858006DD85C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		ED15C130220E8A7F006DD85C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ED290CC922109872002768FB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99EA0DCFD747C35F603AE06F /* Pods_TakeANumber.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B43520240285356A7A15E143 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5308BDD1FC725FFDA8C332A /* Pods_TakeANumber.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF83807DE19E1BAC5F50EA3E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6AEDC37C499E4EFE4EAE25E9 /* Pods-TakeANumber.debug.xcconfig */,
+				98F6C9378BA8F73E35EDF8EC /* Pods-TakeANumber.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ED15C110220E8794006DD85C = {
 			isa = PBXGroup;
 			children = (
 				ED15C11B220E8794006DD85C /* TakeANumber */,
 				ED15C11A220E8794006DD85C /* Products */,
+				ED15C130220E8A7F006DD85C /* GoogleService-Info.plist */,
+				BF83807DE19E1BAC5F50EA3E /* Pods */,
+				B43520240285356A7A15E143 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,8 +83,9 @@
 		ED15C11B220E8794006DD85C /* TakeANumber */ = {
 			isa = PBXGroup;
 			children = (
+				ED15C12E220E8858006DD85C /* TableViewController.swift */,
+				ED290CC922109872002768FB /* User.swift */,
 				ED15C11C220E8794006DD85C /* AppDelegate.swift */,
-				ED15C11E220E8794006DD85C /* ViewController.swift */,
 				ED15C120220E8794006DD85C /* Main.storyboard */,
 				ED15C123220E8796006DD85C /* Assets.xcassets */,
 				ED15C125220E8796006DD85C /* LaunchScreen.storyboard */,
@@ -71,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED15C12B220E8796006DD85C /* Build configuration list for PBXNativeTarget "TakeANumber" */;
 			buildPhases = (
+				B25F87A6A3C62B2DA6ABAB8A /* [CP] Check Pods Manifest.lock */,
 				ED15C115220E8794006DD85C /* Sources */,
 				ED15C116220E8794006DD85C /* Frameworks */,
 				ED15C117220E8794006DD85C /* Resources */,
+				11A064C862D61DB9EA5C983E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED15C127220E8796006DD85C /* LaunchScreen.storyboard in Resources */,
+				ED15C131220E8A7F006DD85C /* GoogleService-Info.plist in Resources */,
 				ED15C124220E8796006DD85C /* Assets.xcassets in Resources */,
 				ED15C122220E8794006DD85C /* Main.storyboard in Resources */,
 			);
@@ -130,13 +163,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11A064C862D61DB9EA5C983E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TakeANumber/Pods-TakeANumber-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TakeANumber/Pods-TakeANumber-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B25F87A6A3C62B2DA6ABAB8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TakeANumber-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ED15C115220E8794006DD85C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED15C11F220E8794006DD85C /* ViewController.swift in Sources */,
 				ED15C11D220E8794006DD85C /* AppDelegate.swift in Sources */,
+				ED15C12F220E8858006DD85C /* TableViewController.swift in Sources */,
+				ED290CCA22109872002768FB /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +365,7 @@
 		};
 		ED15C12C220E8796006DD85C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AEDC37C499E4EFE4EAE25E9 /* Pods-TakeANumber.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +384,7 @@
 		};
 		ED15C12D220E8796006DD85C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98F6C9378BA8F73E35EDF8EC /* Pods-TakeANumber.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
