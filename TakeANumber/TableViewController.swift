@@ -21,17 +21,18 @@ class TableViewController: UITableViewController {
         
         getUsers()
         
-        // observe changes on the queue
-//        ref.observe(DataEventType.value, with: { snapshot in
-//            print(snapshot.value as Any)
-//        })
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        // MARK: - Navigation Bar options
+            // preserve selection between presentations
+            // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+            // display an Edit button in the navigation bar for this view controller.
+            // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    // Attaches an event observer at /HelpSessions/CIS300/queue
+    // The following closure is executed:
+    //     1) Initially when it is attached
+    //     2) Whenever something in the queue changes
     func getUsers() {
         ref.observe(.value, with: { snapshot in
             self.users = []
@@ -60,6 +61,7 @@ class TableViewController: UITableViewController {
         return 1
     }
 
+    // The number of rows in the first section is equal to the number of users in the queue
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (section == 0) ? users.count : 0
     }
@@ -71,18 +73,13 @@ class TableViewController: UITableViewController {
         let usr = users[indexPath.row]
 
         cell.textLabel?.text = usr.name
-        if (usr.helped){
-            cell.detailTextLabel?.text = "Being helped"
-        }
-        else {
-            cell.detailTextLabel?.text = ""
-        }
-        
-        
+        cell.detailTextLabel?.text = (usr.helped) ? "Being helped" : ""
 
         return cell
     }
     
+    
+    // MARK: - Table view functions
 
     /*
     // Override to support conditional editing of the table view.
