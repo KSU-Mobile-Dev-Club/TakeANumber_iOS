@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User : CustomStringConvertible {
+class Student : CustomStringConvertible {
 
     let name : String
     let joinedAt : Date

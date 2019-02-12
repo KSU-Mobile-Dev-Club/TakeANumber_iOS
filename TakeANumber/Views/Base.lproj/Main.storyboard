@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--View Controller-->
         <scene sceneID="qQM-no-9Cj">
             <objects>
-                <tableViewController id="0Ic-uP-xrG" customClass="TableViewController" customModule="TakeANumber" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="0Ic-uP-xrG" customClass="TAViewController" customModule="TakeANumber" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="A4K-9R-0zW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,6 +55,44 @@
             </objects>
             <point key="canvasLocation" x="1025" y="-45"/>
         </scene>
+        <!--Student View Controller-->
+        <scene sceneID="lGR-m8-HyO">
+            <objects>
+                <viewController id="NkF-BA-RbV" customClass="StudentViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JWv-P0-hD3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello student" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHX-9K-S8H">
+                                <rect key="frame" x="136" y="275" width="102" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are 'x' in line." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pao-UM-6U5">
+                                <rect key="frame" x="125" y="331" width="132" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Y students are ahead of you." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLE-GW-Nsn">
+                                <rect key="frame" x="53" y="360" width="277" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Rbg-G4-N6L"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mm1-7E-j7I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.80000000000001" y="980.95952023988013"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="azm-fB-8vJ">
             <objects>
@@ -81,7 +119,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lJs-wV-oKP">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lJs-wV-oKP">
                                 <rect key="frame" x="119" y="318" width="136" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -89,11 +127,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbb-e6-iBI">
-                                <rect key="frame" x="168" y="356" width="38" height="30"/>
+                                <rect key="frame" x="143" y="617" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="Sign in as TA"/>
                                 <connections>
-                                    <action selector="login:" destination="ypp-xL-bw1" eventType="touchUpInside" id="1km-af-ijl"/>
+                                    <action selector="TASignIn:" destination="ypp-xL-bw1" eventType="touchUpInside" id="KQg-Ea-V0M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="476-Cl-eya">
+                                <rect key="frame" x="143" y="356" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign in"/>
+                                <connections>
+                                    <action selector="studentSignIn:" destination="ypp-xL-bw1" eventType="touchUpInside" id="LeZ-lx-yf8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -102,13 +148,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="pRr-jT-RNt"/>
                     <connections>
-                        <outlet property="loginField" destination="lJs-wV-oKP" id="t9M-7n-CAk"/>
-                        <segue destination="z1p-bi-UZp" kind="show" identifier="loginToTAView" id="Ljl-8u-Nay"/>
+                        <outlet property="nameField" destination="lJs-wV-oKP" id="t9M-7n-CAk"/>
+                        <segue destination="z1p-bi-UZp" kind="show" identifier="loginToTA" id="Ljl-8u-Nay"/>
+                        <segue destination="NkF-BA-RbV" kind="show" identifier="loginToStudent" id="LDg-gt-BT6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZk-U3-lM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1177" y="541"/>
+            <point key="canvasLocation" x="-1178.4000000000001" y="540.17991004497753"/>
         </scene>
     </scenes>
 </document>

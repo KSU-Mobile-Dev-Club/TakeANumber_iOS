@@ -6,10 +6,12 @@
 //  Copyright © 2019 Steven Blair. All rights reserved.
 //
 
+// TODO: Refactor so that the TableViewController doesn't need to make network calls.
+
 import UIKit
 import Firebase
 
-class TableViewController: UITableViewController {
+class TAViewController: UITableViewController {
     
     var ref: DatabaseReference!
     var users : [User] = []
