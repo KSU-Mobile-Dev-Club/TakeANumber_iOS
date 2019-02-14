@@ -14,7 +14,7 @@ import Firebase
 class TAViewController: UITableViewController {
     
     var ref: DatabaseReference!
-    var users : [User] = []
+    var users : [Student] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,15 +42,14 @@ class TAViewController: UITableViewController {
                 let u = self.createUser(fromSnapshot: usr)
                 self.users.append(u)
             }
-            self.displayUsers()
-        })
+    self.displayUsers()})
     }
     
-    func createUser(fromSnapshot s : DataSnapshot) -> User {
+    func createUser(fromSnapshot s : DataSnapshot) -> Student {
         let name = s.childSnapshot(forPath: "name").value as! String
         let date = s.childSnapshot(forPath: "dateTime").value as! String
         let status = s.childSnapshot(forPath: "status").value as! String
-        return User(name, date, status)
+        return Student(name, date, status)
     }
     
     func displayUsers() {

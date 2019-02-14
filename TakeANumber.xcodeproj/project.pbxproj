@@ -12,10 +12,11 @@
 		ED15C122220E8794006DD85C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED15C120220E8794006DD85C /* Main.storyboard */; };
 		ED15C124220E8796006DD85C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED15C123220E8796006DD85C /* Assets.xcassets */; };
 		ED15C127220E8796006DD85C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED15C125220E8796006DD85C /* LaunchScreen.storyboard */; };
-		ED15C12F220E8858006DD85C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15C12E220E8858006DD85C /* TableViewController.swift */; };
+		ED15C12F220E8858006DD85C /* TAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15C12E220E8858006DD85C /* TAViewController.swift */; };
 		ED15C131220E8A7F006DD85C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED15C130220E8A7F006DD85C /* GoogleService-Info.plist */; };
-		ED290CCA22109872002768FB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED290CC922109872002768FB /* User.swift */; };
+		ED290CCA22109872002768FB /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED290CC922109872002768FB /* Student.swift */; };
 		EDCE295D2211F84B0053F428 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE295C2211F84B0053F428 /* LoginViewController.swift */; };
+		EDCE296722125B280053F428 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE296622125B280053F428 /* StudentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +29,11 @@
 		ED15C123220E8796006DD85C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED15C126220E8796006DD85C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED15C128220E8796006DD85C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED15C12E220E8858006DD85C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		ED15C12E220E8858006DD85C /* TAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAViewController.swift; sourceTree = "<group>"; };
 		ED15C130220E8A7F006DD85C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		ED290CC922109872002768FB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ED290CC922109872002768FB /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		EDCE295C2211F84B0053F428 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EDCE296622125B280053F428 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,16 +87,49 @@
 		ED15C11B220E8794006DD85C /* TakeANumber */ = {
 			isa = PBXGroup;
 			children = (
-				ED15C12E220E8858006DD85C /* TableViewController.swift */,
-				EDCE295C2211F84B0053F428 /* LoginViewController.swift */,
-				ED290CC922109872002768FB /* User.swift */,
-				ED15C11C220E8794006DD85C /* AppDelegate.swift */,
-				ED15C120220E8794006DD85C /* Main.storyboard */,
-				ED15C123220E8796006DD85C /* Assets.xcassets */,
-				ED15C125220E8796006DD85C /* LaunchScreen.storyboard */,
+				ED4B8C6722125CBA0085DF99 /* Views */,
 				ED15C128220E8796006DD85C /* Info.plist */,
+				ED4B8C6622125C5B0085DF99 /* Supporting Files */,
+				ED4B8C6522125C310085DF99 /* Model objects */,
+				ED4B8C6422125C040085DF99 /* Controllers */,
 			);
 			path = TakeANumber;
+			sourceTree = "<group>";
+		};
+		ED4B8C6422125C040085DF99 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED15C12E220E8858006DD85C /* TAViewController.swift */,
+				EDCE295C2211F84B0053F428 /* LoginViewController.swift */,
+				EDCE296622125B280053F428 /* StudentViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ED4B8C6522125C310085DF99 /* Model objects */ = {
+			isa = PBXGroup;
+			children = (
+				ED290CC922109872002768FB /* Student.swift */,
+			);
+			path = "Model objects";
+			sourceTree = "<group>";
+		};
+		ED4B8C6622125C5B0085DF99 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED15C11C220E8794006DD85C /* AppDelegate.swift */,
+				ED15C123220E8796006DD85C /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED4B8C6722125CBA0085DF99 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED15C125220E8796006DD85C /* LaunchScreen.storyboard */,
+				ED15C120220E8794006DD85C /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,10 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDCE296722125B280053F428 /* StudentViewController.swift in Sources */,
 				EDCE295D2211F84B0053F428 /* LoginViewController.swift in Sources */,
 				ED15C11D220E8794006DD85C /* AppDelegate.swift in Sources */,
-				ED15C12F220E8858006DD85C /* TableViewController.swift in Sources */,
-				ED290CCA22109872002768FB /* User.swift in Sources */,
+				ED15C12F220E8858006DD85C /* TAViewController.swift in Sources */,
+				ED290CCA22109872002768FB /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4PY254CLJT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TakeANumber/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -392,7 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4PY254CLJT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TakeANumber/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
