@@ -13,6 +13,11 @@ import UIKit
 
 class LoginViewController : UIViewController {
     
+    let data = UserDefaults()
+    
+    @IBAction func editedUsernam(_ sender: UITextField) {
+    data.set(sender.text, forKey: "userName")
+    }
     let savedData = UserDefaults() //dictionary that is saved throughout project
     
     
@@ -27,6 +32,9 @@ class LoginViewController : UIViewController {
         //performSegue(withIdentifier: "loginToStudent", sender: self)
         savedData.set("student", forKey: "loggedInAs")
     }
+    
+    
+    
     
     @IBAction func TASignIn(_ sender: UIButton) {
        // performSegue(withIdentifier: "loginToTA", sender: self)

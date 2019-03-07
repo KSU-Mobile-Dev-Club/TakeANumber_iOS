@@ -83,7 +83,7 @@ class chooseClass: UITableViewController {
         
         let usr = users[indexPath.row]
         
-        cell.textLabel?.text = usr.name
+        cell.textLabel?.text = "CIS 300"
         cell.detailTextLabel?.text = (usr.helped) ? "Being helped" : ""
         
         return cell

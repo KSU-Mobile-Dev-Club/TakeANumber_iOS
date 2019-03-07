@@ -13,10 +13,12 @@ class StudentViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for child in self.children {
-            if child.restorationIdentifier == "SV_B0" {
-                let button = child as! UIButton
-                button.setTitle(data.string(forKey: "class"), for: .normal)
+        for child in self.view.subviews {
+            print("something was done")
+            if child.restorationIdentifier == "SV_L0" {
+                let realChild = child as! UILabel
+                
+                realChild.text = "Welcome \(data.string(forKey: "userName")!), to \(data.string(forKey: "class")!)"
             }
         }
         
