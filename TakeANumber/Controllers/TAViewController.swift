@@ -64,7 +64,7 @@ class TAViewController: UITableViewController {
 
     // The number of rows in the first section is equal to the number of users in the queue
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (section == 0) ? users.count : 0
+        return (section == 0) ? users.count: 0
     }
 
     
@@ -73,8 +73,8 @@ class TAViewController: UITableViewController {
         
         let usr = users[indexPath.row]
 
-        cell.textLabel?.text = usr.name
-        cell.detailTextLabel?.text = (usr.helped) ? "Being helped" : ""
+        cell.textLabel?.text = "usr.name"
+        cell.detailTextLabel?.text = (true) ? "Being helped" : ""
 
         cell.textLabel?.text = "fkhjsdfkjs"
         
@@ -128,5 +128,9 @@ class TAViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+    }
 
 }

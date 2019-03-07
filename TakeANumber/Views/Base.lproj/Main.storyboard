@@ -63,7 +63,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello student" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHX-9K-S8H">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="SV_B0" text="Hello student" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHX-9K-S8H">
                                 <rect key="frame" x="136" y="275" width="102" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -132,7 +132,7 @@
                                 <state key="normal" title="Sign in as TA"/>
                                 <connections>
                                     <action selector="TASignIn:" destination="ypp-xL-bw1" eventType="touchUpInside" id="KQg-Ea-V0M"/>
-                                    <segue destination="OFQ-Py-imb" kind="show" id="IJw-ND-wSn"/>
+                                    <segue destination="z1p-bi-UZp" kind="show" id="RZk-8n-m9p"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="476-Cl-eya">
@@ -141,7 +141,7 @@
                                 <state key="normal" title="Sign in"/>
                                 <connections>
                                     <action selector="studentSignIn:" destination="ypp-xL-bw1" eventType="touchUpInside" id="LeZ-lx-yf8"/>
-                                    <segue destination="z1p-bi-UZp" kind="show" id="bmW-IW-DAu"/>
+                                    <segue destination="OFQ-Py-imb" kind="show" id="KTg-yE-0af"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -160,13 +160,13 @@
         <!--Choose Class-->
         <scene sceneID="Lxb-yM-hnN">
             <objects>
-                <tableViewController id="OFQ-Py-imb" customClass="chooseClass" customModule="TakeANumber" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="OFQ-Py-imb" customClass="chooseClass" customModule="TakeANumber" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="737-DW-Yy9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="XS2-e7-u1G" detailTextLabel="pwc-z5-SK6" style="IBUITableViewCellStyleSubtitle" id="cAK-Wq-OzZ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" textLabel="XS2-e7-u1G" detailTextLabel="pwc-z5-SK6" style="IBUITableViewCellStyleSubtitle" id="cAK-Wq-OzZ">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cAK-Wq-OzZ" id="CTS-F8-4zW">
@@ -197,10 +197,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="cEd-h5-qUL"/>
+                    <connections>
+                        <segue destination="NkF-BA-RbV" kind="show" identifier="moveToStudentView" id="Ntm-X3-yLm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWn-mr-NKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-610" y="545"/>
+            <point key="canvasLocation" x="-634" y="961"/>
         </scene>
     </scenes>
 </document>

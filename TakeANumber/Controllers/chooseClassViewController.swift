@@ -22,7 +22,7 @@ class button: UIButton {
 
 class chooseClass: UITableViewController {
     
-    
+   let data = UserDefaults()
     var ref: DatabaseReference!
     var users : [Student] = []
     
@@ -79,7 +79,7 @@ class chooseClass: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
         
         let usr = users[indexPath.row]
         
@@ -145,10 +145,12 @@ class chooseClass: UITableViewController {
       */
     
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if self.tableView.dequeueReusableCell(withIdentifier: "cell")?.isSelected ?? false {
-            print("ya")
-        }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+        print(tableView.cellForRow(at: indexPath)?.textLabel?.text as! String)
+        data.set(tableView.cellForRow(at: indexPath)?.textLabel?.text as! String, forKey: "class")
+  
+        performSegue(withIdentifier: "moveToStudentView", sender: self)
     }
     
     
