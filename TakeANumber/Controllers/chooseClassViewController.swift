@@ -80,7 +80,6 @@ class chooseClass: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
-        
         let usr = users[indexPath.row]
         
         cell.textLabel?.text = "CIS 300"
