@@ -76,6 +76,8 @@ class TAViewController: UITableViewController {
         cell.textLabel?.text = usr.name
         cell.detailTextLabel?.text = (usr.helped) ? "Being helped" : ""
 
+        cell.textLabel?.text = "fkhjsdfkjs"
+        
         return cell
     }
     

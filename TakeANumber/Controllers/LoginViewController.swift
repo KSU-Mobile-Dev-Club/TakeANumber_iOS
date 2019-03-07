@@ -12,18 +12,25 @@
 import UIKit
 
 class LoginViewController : UIViewController {
+    
+    let savedData = UserDefaults() //dictionary that is saved throughout project
+    
+    
     @IBOutlet weak var nameField: UITextField!
     
     var username : String? {
+        savedData.set(nameField.text, forKey: "userName")
         return nameField.text
     }
     
     @IBAction func studentSignIn(_ sender: UIButton) {
-        performSegue(withIdentifier: "loginToStudent", sender: self)
+        //performSegue(withIdentifier: "loginToStudent", sender: self)
+        savedData.set("student", forKey: "loggedInAs")
     }
     
     @IBAction func TASignIn(_ sender: UIButton) {
-        performSegue(withIdentifier: "loginToTA", sender: self)
+       // performSegue(withIdentifier: "loginToTA", sender: self)
+        savedData.set("TA", forKey: "loggedInAs")
     }
     override func viewDidLoad() {
         super.viewDidLoad()

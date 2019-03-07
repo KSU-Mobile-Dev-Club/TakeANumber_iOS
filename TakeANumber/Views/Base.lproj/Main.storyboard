@@ -132,6 +132,7 @@
                                 <state key="normal" title="Sign in as TA"/>
                                 <connections>
                                     <action selector="TASignIn:" destination="ypp-xL-bw1" eventType="touchUpInside" id="KQg-Ea-V0M"/>
+                                    <segue destination="OFQ-Py-imb" kind="show" id="IJw-ND-wSn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="476-Cl-eya">
@@ -140,6 +141,7 @@
                                 <state key="normal" title="Sign in"/>
                                 <connections>
                                     <action selector="studentSignIn:" destination="ypp-xL-bw1" eventType="touchUpInside" id="LeZ-lx-yf8"/>
+                                    <segue destination="z1p-bi-UZp" kind="show" id="bmW-IW-DAu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -149,13 +151,56 @@
                     <navigationItem key="navigationItem" id="pRr-jT-RNt"/>
                     <connections>
                         <outlet property="nameField" destination="lJs-wV-oKP" id="t9M-7n-CAk"/>
-                        <segue destination="z1p-bi-UZp" kind="show" identifier="loginToTA" id="Ljl-8u-Nay"/>
-                        <segue destination="NkF-BA-RbV" kind="show" identifier="loginToStudent" id="LDg-gt-BT6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZk-U3-lM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1178.4000000000001" y="540.17991004497753"/>
+            <point key="canvasLocation" x="-1370" y="545"/>
+        </scene>
+        <!--Choose Class-->
+        <scene sceneID="Lxb-yM-hnN">
+            <objects>
+                <tableViewController id="OFQ-Py-imb" customClass="chooseClass" customModule="TakeANumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="737-DW-Yy9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="XS2-e7-u1G" detailTextLabel="pwc-z5-SK6" style="IBUITableViewCellStyleSubtitle" id="cAK-Wq-OzZ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cAK-Wq-OzZ" id="CTS-F8-4zW">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XS2-e7-u1G">
+                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pwc-z5-SK6">
+                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OFQ-Py-imb" id="ADC-IY-4fb"/>
+                            <outlet property="delegate" destination="OFQ-Py-imb" id="17C-YL-xn1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="cEd-h5-qUL"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PWn-mr-NKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-610" y="545"/>
         </scene>
     </scenes>
 </document>
