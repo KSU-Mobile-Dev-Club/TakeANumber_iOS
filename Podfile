@@ -8,4 +8,6 @@ target 'TakeANumber' do
   # Pods for TakeANumber
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'FirebaseUI'
+  pod 'Firebase/Auth'
 end
